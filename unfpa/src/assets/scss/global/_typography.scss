@@ -1,0 +1,23 @@
+//
+// NewzaldTest
+//
+
+@font-face {
+	font-family: 'NewzaldTest';
+	src: local("NewzaldTest"), url('/fonts/NewzaldTest/NewzaldTest-Bold.otf');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+//
+// Muli
+//
+
+@font-face {
+	font-family: 'Muli';
+	src: local("Muli"), url('/fonts/Muli/Muli-Regular.ttf');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}

@@ -2,3 +2,8 @@
 @import './utils/variables';
 @import './utils/responsive';
 @import './utils/mixins';
+
+// Globals
+// @import './global/typography';
+@import './global/reset';
+@import './global/content';

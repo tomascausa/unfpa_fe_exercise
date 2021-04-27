@@ -1,0 +1,84 @@
+.banner {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: $color-black;
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 16%;
+
+        @include media('>tablet') {
+            object-position: center;
+        }
+    }
+
+    &__wrapper {
+        @extend %container;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 90%;
+        height: 100%;
+    }
+
+    &__content {
+        position: relative;
+    }
+
+    &__title {
+        max-width: rem-calc(825);
+        font-size: rem-calc(34);
+        font-family: $font-newzaldtest;
+        text-align: center;
+        line-height: 1.1;
+        color: $color-white;
+
+        @include media('>phone') {
+            font-size: rem-calc(70);
+        }
+    }
+
+    &__cta-wrapper {
+        position: absolute;
+        bottom: rem-calc(-150);
+        left: 50%;
+        margin-top: rem-calc(90);
+        transform: translateX(-50%);
+    }
+
+    &__cta {
+        font-size: rem-calc(26);
+        font-family: $font-newzaldtest;
+        text-align: center;
+        border-bottom: 1px solid $color-white;
+        color: $color-white;
+        cursor: pointer;
+        transition: opacity 250ms ease-in-out, border-color 250ms ease-in-out;
+
+        @include media('>phone') {
+            font-size: rem-calc(40);
+        }
+
+        &:hover {
+            opacity: 0.9;
+            border-color: rgba(255, 255, 255, 0.9);
+        }
+    }
+}

@@ -19,7 +19,16 @@
                             <stop stop-color="#2EFFAE" offset="100%"></stop>
                         </linearGradient>
                     </defs>
-                    
+
+                    <circle
+                        cx="50"
+                        cy="50" 
+                        r="47" 
+                        stroke="rgba(255,255,255,0.35)"
+                        stroke-width="0.5"
+                        stroke-dasharray="0.8"
+                        fill="none"></circle>
+
                     <circle
                         class="data data01"
                         cx="50"
@@ -34,15 +43,24 @@
             <div class="hero__content">
                 <h1 class="hero__title">Every 2 minutes, a woman dies giving birth</h1>
 
-                <div class="hero__scroll"></div>
+                <div class="hero__scroll-wrapper">
+                    <div class="hero__scroll"></div>
+                    <span class="hero__scroll-label">scroll down</span>
+                </div>
             </div>
 
             <div class="hero__copywright">
-                <p>Safe birth even here ® 2018. <a href="">Privacy Policy</a> and <a href="">Terms of use</a>. Sponsored bys</p>
+                <p>Safe birth even here ® 2018. <a href="">Privacy Policy</a> and <a href="">Terms of use</a>. Sponsored by</p>
                 <picture>
-                    <img src="" alt="" class="hero__copywright-logo">
+                    <img src="../../assets/images/johnson-johnson-logo.png" alt="Johnson & Johnson" class="hero__copywright-logo">
                 </picture>
             </div>
+        </div>
+
+        <div class="hero__logo">
+            <picture>
+                <img src="../../assets/images/unfpa-logo.svg" alt="UNFPA Logo" class="hero__logo-image">
+            </picture>
         </div>
     </div>
 </template>
