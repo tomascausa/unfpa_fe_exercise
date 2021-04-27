@@ -1,0 +1,19 @@
+@keyframes HeroScrollUpDown {
+    0%, 100% {
+      top: rem-calc(8);
+    }
+
+    50% {
+      top: rem-calc(12);
+    }
+}
+
+@keyframes BannerScrollUpDown {
+    0%, 100% {
+      bottom: rem-calc(72);
+    }
+
+    50% {
+      bottom: rem-calc(80);
+    }
+}

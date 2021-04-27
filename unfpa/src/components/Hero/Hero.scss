@@ -102,6 +102,7 @@
         font-family: $font-newzaldtest;
         text-align: center;
         line-height: 1.1;
+        letter-spacing: 2px;
         color: $color-white;
 
         @include media('>phone') {
@@ -124,6 +125,7 @@
             width: rem-calc(1);
             height: rem-calc(6);
             transform: translateX(-50%);
+            animation: HeroScrollUpDown 1.2s linear infinite;
             background-color: $color-white;
         }
     }

@@ -1,0 +1,72 @@
+.parallax-banner {
+    position: relative;
+    z-index: 0;
+    
+    &__background {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: rem-calc(300);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include media('>phone') {
+            min-height: fluid('phone', 'desktop-xlarge', 300px, 750px);
+        }
+
+        @include media('>desktop-xlarge') {
+            min-height: rem-calc(750);
+        }
+    }
+
+    &__title {
+        max-width: 60%;
+        font-size: rem-calc(30);
+        font-family: $font-newzaldtest;
+        font-family: $font-newzaldtest;
+        text-align: center;
+        line-height: 1.1;
+        letter-spacing: 2px;
+        color: $color-white;
+
+        @include media('>phone') {
+            max-width: rem-calc(805);
+            font-size: fluid('phone', 'desktop-xlarge', 30px, 50px);
+        }
+
+        @include media('>desktop-xlarge') {
+            font-size: rem-calc(50px);
+        }
+    }
+
+    &--with-decoration {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: rem-calc(-15);
+            left: 50%;
+            width: rem-calc(25);
+            height: rem-calc(210);
+            transform: translateY(-50%);
+            background-image: url('../../assets/images/line-decoration.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 1;
+
+            @include media('>phone') {
+                width: fluid('phone', 'desktop-xlarge', 25px, 65px);
+                height: fluid('phone', 'desktop-xlarge', 210px, 592px);
+            }
+    
+            @include media('>desktop-xlarge') {
+                width: rem-calc(65);
+                height: rem-calc(592);
+            }
+        }
+    }
+}
