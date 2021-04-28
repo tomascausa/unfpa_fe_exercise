@@ -25,8 +25,8 @@
                         cy="50" 
                         r="47" 
                         stroke="rgba(255,255,255,0.35)"
-                        stroke-width="0.5"
-                        stroke-dasharray="0.8"
+                        stroke-width="0.2"
+                        stroke-dasharray="0.7"
                         fill="none"></circle>
 
                     <circle
@@ -45,12 +45,14 @@
 
                 <div class="hero__scroll-wrapper">
                     <div class="hero__scroll"></div>
+
                     <span class="hero__scroll-label">scroll down</span>
                 </div>
             </div>
 
             <div class="hero__copywright">
                 <p>Safe birth even here ® 2018. <a href="">Privacy Policy</a> and <a href="">Terms of use</a>. Sponsored by</p>
+                
                 <a href="https://www.jnj.com/" target="_blank">
                     <picture>
                         <img src="../../assets/images/johnson-johnson-logo.png" alt="Johnson & Johnson" class="hero__copywright-logo">
