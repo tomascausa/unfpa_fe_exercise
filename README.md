@@ -2,7 +2,6 @@
 
 > The aim of the test was to replicate the design and functionality as close as possible to a sample website using multiple web technologies.
 
-### DEMO: 
 
 ## Project setup
 
