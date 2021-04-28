@@ -17,3 +17,12 @@
       bottom: rem-calc(80);
     }
 }
+
+@keyframes ChangeBorderColor {
+  from {
+      border-color: $color-gray;
+  }
+  to {
+      border-color: $color-dark-gray;
+  }
+}

@@ -3,7 +3,25 @@ import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
 export default Vue.extend({
-    props: {},
+    props: {
+        title: {
+            type: String,
+            required: false
+        },
+        text: {
+            type: String,
+            required: true
+        },
+        image: {
+            type: String,
+            required: true
+        },
+        isVertical: {
+            type: Boolean,
+            required: false,
+            default: () => false
+        },
+    },
     mounted() {
         document.querySelectorAll('.scroll__reveal').forEach(elem => {
             this.hide(elem);
@@ -12,13 +30,7 @@ export default Vue.extend({
                 trigger: elem,
                 onEnter: () => {
                     this.animateFrom(elem, 1);
-                },
-                // onEnterBack: () => {
-                //     this.animateFrom(elem, -1);
-                // },
-                // onLeave: () => {
-                //     this.hide(elem);
-                // },
+                }
             });
         });
     },

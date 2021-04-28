@@ -1,0 +1,81 @@
+.safe-birth {
+    &__wrapper {
+        @extend %container;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: rem-calc(50) 0;
+
+        @include media('>phone') {
+            padding: fluid('phone', 'desktop-xlarge', 70px, 275px) 0;
+        }
+
+        @include media('>desktop-xlarge') {
+            padding: rem-calc(275) 0;
+        }
+    }
+
+    &__circles {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: rem-calc(275);
+        height: rem-calc(275);
+
+        @include media('>phone') {
+            width: fluid('phone', 'desktop-xlarge', 275px, 475px);
+            height: fluid('phone', 'desktop-xlarge', 275px, 475px);
+        }
+
+        @include media('>desktop-xlarge') {
+            width: rem-calc(475);
+            height: rem-calc(475);
+        }
+    }
+
+    &__circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 75%;
+        height: 75%;
+        transform: translateX(-50%) translateY(-50%);
+        border: 1px solid $color-gray;
+        border-radius: 100%;
+        animation: ChangeBorderColor 0.7s linear infinite;
+
+        &--small {
+            border-color: $color-dark-gray;
+        }
+
+        &--medium {
+            width: 87.5%;
+            height: 87.5%;
+            animation: ChangeBorderColor 0.85s linear infinite;
+        }
+
+        &--large {
+            width: 100%;
+            height: 100%;
+            animation: ChangeBorderColor 1s linear infinite;
+        }
+    }
+
+    &__title {
+        font-size: 35px;
+        font-family: $font-newzaldtest;
+        width: 60%;
+        text-align: center;
+
+        @include media('>phone') {
+            font-size: fluid('phone', 'desktop-xlarge', 35px, 65px);
+        }
+
+        @include media('>desktop-xlarge') {
+            font-size: rem-calc(65);
+        }
+    }
+}
+

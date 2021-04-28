@@ -62,13 +62,17 @@
         font-size: rem-calc(20);
 
         @include media('>phone') {
-            margin-top: fluid('tablet', 'desktop-xlarge', 15px, 45px);
-            font-size: fluid('tablet', 'desktop-xlarge', 20px, 40px);
+            margin-top: fluid('phone', 'desktop-xlarge', 15px, 45px);
+            font-size: fluid('phone', 'desktop-xlarge', 20px, 40px);
         }
     
         @include media('>desktop-xlarge') {
             margin-top: rem-calc(45);
             font-size: rem-calc(40);
+        }
+
+        span {
+            color: $color-red;
         }
     }
 
@@ -85,5 +89,56 @@
     &__image {
         width: 100%;
         height: 100%;
+        object-fit: cover;
+    }
+
+    &--vertical {
+        .image-text {
+            &__wrapper {
+                @include media('>phone') {
+                    grid-template-columns: 1fr;
+                    gap: fluid('phone', 'desktop-xlarge', 40px, 140px);
+                    padding: fluid('phone', 'desktop-xlarge', 50px, 200px) 0;
+                }
+
+                @include media('>desktop-xlarge') {
+                    gap: rem-calc(140);
+                    padding: rem-calc(200) 0;
+                }
+            }
+
+            &__media {
+                @include media('>phone') {
+                    width: 55%;
+                }
+            }
+
+            &__content {
+                @include media('>phone') {
+                    width: 54%;
+                    max-width: fluid('phone', 'desktop-xlarge', 520px, 770px);
+                    margin-right: 10%;
+                    padding: 0;
+                }
+
+                @include media('>desktop-xlarge') {
+                    max-width: rem-calc(770);
+                }
+            }
+
+            &__text {
+                margin-top: 0;
+                font-size: rem-calc(24);
+                line-height: 1.2;
+
+                @include media('>phone') {
+                    font-size: fluid('phone', 'desktop-xlarge', 24px, 50px);
+                }
+            
+                @include media('>desktop-xlarge') {
+                    font-size: rem-calc(50);
+                }
+            }
+        }
     }
 }

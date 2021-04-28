@@ -1,13 +1,13 @@
 <template>
-    <div class="image-text">
+    <div class="image-text" :class="{'image-text--vertical': isVertical}">
         <div class="image-text__wrapper">
-            <div class="image-text__content scroll__reveal scroll__reveal--left">
-                <h2 class="image-text__title">I can work to save my people</h2>
-                <p class="image-text__text">Yamah, a midwife and supervisor of a maternal health clinic</p>
+            <div class="image-text__content scroll__reveal" :class="{'scroll__reveal--left': !isVertical}">
+                <h2 class="image-text__title">{{ title }}</h2>
+                <p class="image-text__text" v-html="text"></p>
             </div>
-            <div class="image-text__media scroll__reveal scroll__reveal--right">
+            <div class="image-text__media scroll__reveal" :class="{'scroll__reveal--right': !isVertical, 'scroll__reveal--left': isVertical}">
                 <picture>
-                    <img :src="require('@/assets/images/image-text-image.png')" class="image-text__image">
+                    <img :src="image" class="image-text__image">
                 </picture>
             </div>
         </div>

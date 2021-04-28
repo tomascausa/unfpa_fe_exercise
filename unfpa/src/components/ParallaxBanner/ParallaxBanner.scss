@@ -12,6 +12,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        transition: background-image 250ms ease-in-out;
 
         @include media('>phone') {
             min-height: fluid('phone', 'desktop-xlarge', 300px, 750px);
@@ -23,7 +24,7 @@
     }
 
     &__title {
-        max-width: 60%;
+        width: 60%;
         font-size: rem-calc(30);
         font-family: $font-newzaldtest;
         font-family: $font-newzaldtest;
@@ -42,30 +43,75 @@
         }
     }
 
-    &--with-decoration {
-        position: relative;
+    &__decoration {
+        position: absolute;
+        display: none;
+        left: 50%;
+        width: rem-calc(25);
+        height: rem-calc(210);
+        transform: translateX(-50%);
+        background-image: url('../../assets/images/line-decoration.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1;
 
-        &::after {
-            content: '';
-            position: absolute;
-            top: rem-calc(-15);
-            left: 50%;
-            width: rem-calc(25);
-            height: rem-calc(210);
-            transform: translateY(-50%);
-            background-image: url('../../assets/images/line-decoration.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            z-index: 1;
+        @include media('>phone') {
+            display: block;
+            width: fluid('phone', 'desktop-xlarge', 25px, 65px);
+            height: fluid('phone', 'desktop-xlarge', 210px, 592px);
+        }
+
+        @include media('>desktop-xlarge') {
+            width: rem-calc(65);
+            height: rem-calc(592);
+        }
+    }
+
+    .multiple {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem-calc(30);
+
+        @include media('>phone') {
+            gap: fluid('phone', 'desktop-xlarge', 40px, 55px);
+        }
+
+        @include media('>desktop-xlarge') {
+            gap: rem-calc(55);
+        }
+        
+        &__button {
+            width: rem-calc(90);
+            height: rem-calc(90);
+            padding: rem-calc(5);
+            font-size: rem-calc(14);
+            font-family: $font-muli;
+            border: 2px solid $color-white;
+            border-radius: 100%;
+            text-align: center;
+            color: $color-white;
+            opacity: 0.5;
+            transition: opacity 250ms ease-in-out;
 
             @include media('>phone') {
-                width: fluid('phone', 'desktop-xlarge', 25px, 65px);
-                height: fluid('phone', 'desktop-xlarge', 210px, 592px);
+                width: fluid('phone', 'desktop-xlarge', 90px, 150px);
+                height: fluid('phone', 'desktop-xlarge', 90px, 150px);
+                padding: rem-calc(10);
+                font-size: rem-calc(16);
+                border-width: 4px;
             }
-    
+
             @include media('>desktop-xlarge') {
-                width: rem-calc(65);
-                height: rem-calc(592);
+                width: rem-calc(150);
+                height: rem-calc(150);
+            }
+
+            &--active {
+                opacity: 1;
+            }
+
+            &:hover {
+                opacity: 1;
             }
         }
     }
