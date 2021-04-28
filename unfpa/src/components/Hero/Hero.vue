@@ -2,7 +2,7 @@
     <div class="hero">
         <div class="hero__background">
             <picture class="hero__picture">
-                <img src="../../assets/images/hero-image.png" alt="Hero image" class="hero__image">
+                <img src="../../assets/images/hero-image.png" alt="Hero image" class="hero__image esta-imagen">
             </picture>
         </div>
 

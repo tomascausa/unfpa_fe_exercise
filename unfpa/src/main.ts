@@ -4,7 +4,6 @@ import router from './router'
 
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-// import DrawSVGPlugin from '@/plugins/DrawSVG';
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(DrawSVGPlugin);

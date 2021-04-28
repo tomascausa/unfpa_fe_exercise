@@ -1,6 +1,6 @@
 import Vue, { PropType } from 'vue';
 import { gsap } from 'gsap';
-
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 export default Vue.extend({
     props: {
@@ -31,19 +31,20 @@ export default Vue.extend({
         }
     },
     mounted() {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: '#parallax-1',
-                scrub: true,
-                start: "top bottom",
-                end: "center center",
-                // end: () => innerHeight / 2
-            },
-            defaults:{duration:1, ease:'none'}
-        });
-        tl.set('.parallax-banner__decoration', {y: -innerHeight/1.2});
-
-        tl.to('.parallax-banner__decoration', {y: -innerHeight/2.6});
+        setTimeout(() => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#parallax-1',
+                    scrub: true,
+                    start: "top bottom",
+                    end: "75% 75%"
+                },
+                defaults:{duration:1, ease:'none'}
+            });
+            tl.set('.parallax-banner__decoration', {y: -innerHeight/1.2});
+    
+            tl.to('.parallax-banner__decoration', {y: -innerHeight/2.6});
+        }, 500);
     },
     methods: {
         updateBackground(index: number) {
