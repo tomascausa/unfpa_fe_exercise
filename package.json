@@ -15,7 +15,7 @@
     "easytimer.js": "^4.3.4",
     "ev-emitter": "^1.1.1",
     "fontfaceobserver": "^2.1.0",
-    "gsap": "^3.6.1",
+    "gsap": "npm:@gsap/simply",
     "imagesloaded": "^4.1.4",
     "include-media": "^1.4.9",
     "node-sass": "^5.0.0",
