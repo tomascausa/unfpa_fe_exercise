@@ -1,6 +1,7 @@
 <template>
   <div class="page-home home">
     <Hero :class="['home__section', 'home__section--active', 'home__section-1', 'first']" />
+    
     <Banner
       :class="['home__section', 'home__section-2']"
       title="That's 830 women every day."
@@ -21,6 +22,7 @@ export default {
     Hero,
     Banner
   },
+  // eslint-disable-next-line
   mounted() {
     const tl = gsap.timeline({
         scrollTrigger: {
